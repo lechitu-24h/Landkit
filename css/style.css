@@ -37,7 +37,7 @@ a {
     padding-left: 20px;
     padding-right: 20px;
 }
-.header .menu ul {
+.header .menu .menu-list {
     list-style-type: none;
     display: flex;
     margin: 0;
@@ -90,6 +90,52 @@ a {
     .menu, .header-btn {
         display: none;
     }
+}
+.header .menu ul li {
+    position: relative;
+}
+.header .dropdown-menu {
+    padding: 20px 20px;
+    border: 0 solid rgba(22,28,45,.15);
+    border-radius: .375rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(22,28,45,.1);
+    position: absolute;
+    background-color: #fff;
+    top: 20px;
+}
+.header .dropdown-menu .form-group {
+    padding: 1.625rem 1.75rem;
+    width: 100%;
+}
+.header .dropdown-menu .title {
+    line-height: 1.55;
+    padding-bottom: .5rem;
+    font-size: .75rem;
+    color: #335eea;
+    text-transform: uppercase;
+}
+.header .dropdown-menu .sumary {
+    padding-bottom: 7px;
+}
+.header .dropdown-menu .sumary a {
+    color: #506690;
+    font-size: .9375rem;
+    font-weight: 300;
+}
+.header .dropdown-menu .sumary a:hover {
+    color: #335eea;
+}
+.header .page {
+    display: flex;
+    left: -200%;
+    display: none;
+}
+.header .page-link:hover + .page {
+    display: block;
+    display: flex;
+}
+.header .account {
+    list-style-type: none;
 }
 /* End header */
 
@@ -284,3 +330,9 @@ a {
     }
 }
 /* End partner */
+
+/* Start about us */
+.about-us {
+    
+}
+/* End about us */
