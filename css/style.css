@@ -34,6 +34,10 @@ a {
     font-size: 24px;
     padding: 3px 0px;
 }
+.header .menu {
+    display: flex;
+    width: 100%;
+}
 .header .menu-header {
     display: flex;
     padding-left: 20px;
@@ -43,14 +47,12 @@ a {
     list-style-type: none;
     display: flex;
     margin: 8px 0;
+    margin-left: auto;
 }
 .header .nav-link {
     color: #506690;
     font-weight: 500;
     padding: 0px 24px;
-}
-.header .nav-link:hover {
-    color: #335eea;
 }
 .header .header-btn {
     background-color: #335eea;
@@ -75,34 +77,10 @@ a {
     border: 1px solid transparent;
     border-radius: .375rem;
     margin-left: auto;
+    cursor: pointer;
 }
 .header .menu-btn i {
     color: #506690;
-}
-@media (min-width: 931px) {
-    .header .menu-btn {
-        display: none;
-    }
-}
-@media (max-width: 930px) {
-    .menu, .header-btn {
-        display: none;
-    }
-    .header .menu-btn {
-        display: block;
-    }
-}
-.header .menu ul li {
-    position: relative;
-}
-.header .dropdown-menu {
-    padding: 20px 20px;
-    border: 0 solid rgba(22,28,45,.15);
-    border-radius: .375rem;
-    box-shadow: 0 0.5rem 1.5rem rgba(22,28,45,.1);
-    position: absolute;
-    background-color: #fff;
-    top: 110%;
 }
 .header .dropdown-menu .form-group {
     padding: 1.625rem 1.75rem;
@@ -124,33 +102,7 @@ a {
     font-weight: 300;
 }
 .header .dropdown-menu .sumary a:hover {
-    color: #335eea;
-}
-.header .page {
-    display: flex;
-    left: -200%;
-    display: none;
-    transition: all 2s linear;
-    transform: translate3d(0,-3px,0);
-}
-.header .page-link:hover > .page {
-    display: block;
-    display: flex;
-}
-.header .page-link:hover .nav-link {
-    color: #335eea;
-}
-.header .account {
-    list-style-type: none;
-    width: 150%;
-    left: -35%;
-    padding: 30px 0 30px 30px;
-    display: none;
-}
-.header .account .dropdown-item {
-    padding-bottom: 6px;
-    position: relative;
-    padding-right: 30px;
+    color: #335eea !important;
 }
 .header .account .drop-link1 {
     display: flex;
@@ -158,6 +110,7 @@ a {
     font-size: .9375rem;
     font-weight: 300;
     line-height: 1.6;
+    cursor: pointer;
 }
 .header .account .drop-link1 .drop-arrow {
     margin-left: auto;
@@ -169,16 +122,6 @@ a {
     color: #335eea;
 }
 .header .account .dropdown-menu2 {
-    position: absolute;
-    list-style-type: none;
-    border: 0 solid rgba(22,28,45,.15);
-    border-radius: .375rem;
-    box-shadow: 0 0.5rem 1.5rem rgba(22,28,45,.1);
-    background: #fff;
-    padding: 30px;
-    top: -30px;
-    left: 100%;
-    width: 100%;
     display: none;
 }
 .header .account .dropdown-menu2 li {
@@ -193,35 +136,7 @@ a {
 .header .account .dropdown-menu2 a:hover {
     color: #335eea;
 }
-/* Hover menu account */
-.header .account-link:hover > .account {
-    display: block;
-}
-.header .account-link:hover .nav-link {
-    color: #335eea;
-}
-.header .account .menu-settings:hover .drop-settings {
-    display: block;
-}
-.header .account .menu-signin:hover .drop-signin {
-    display: block;
-}
-.header .account .menu-signup:hover .drop-signup {
-    display: block;
-}
-.header .account .menu-pass:hover .drop-pass {
-    display: block;
-}
-.header .account .menu-error:hover .drop-error {
-    display: block;
-}
 /* Documentation */
-.header .documentation {
-    padding: 30px 20px;
-    width: 200%;
-    left: -50%;
-    display: none;
-}
 .header .documentation .doc-link {
     display: flex;
     align-items: center;
@@ -253,16 +168,6 @@ a {
     font-size: 75%;
     line-height: 1;
     padding: 3px 10px;
-}
-.header .documentation-link:hover > .documentation {
-    display: block;
-}
-.header .landings {
-    display: flex;
-    width: 500%;
-    left: -200%;
-    padding: 0;
-    display: none;
 }
 .header .landings .img {
     width: 50%;
@@ -300,16 +205,11 @@ a {
     line-height: 1.6;
     border-radius: .375rem;
 }
-.header .landings .list-group {
-    display: flex;
-    width: 50%;
-    padding: 20px 20px 20px 0;
-}
 .header .landings .list-group .col {
     width: 50%;
 }
 .header .landings .list-item {
-    padding: 1.625rem 1.75rem 0 1.75rem;
+    padding: 24px 24px 0 24px;
     width: 100%;
 }
 .header .landings .list-item .title {
@@ -327,9 +227,203 @@ a {
     font-size: .9375rem;
     font-weight: 300;
 }
-.header .landings-link:hover > .landings {
-    display: block;
-    display: flex;
+@media (min-width: 931px) {
+    .header .menu .btn-close {
+        display: none;
+    }
+    .header .nav-link:hover {
+        color: #335eea;
+    }
+    .header .page-link:hover .nav-link {
+        color: #335eea;
+    }
+    .header .menu-btn {
+        display: none;
+    }
+    .header .menu ul li {
+        position: relative;
+    }
+    .header .dropdown-menu {
+        padding: 20px 20px;
+        border: 0 solid rgba(22,28,45,.15);
+        border-radius: .375rem;
+        box-shadow: 0 0.5rem 1.5rem rgba(22,28,45,.1);
+        position: absolute;
+        background-color: #fff;
+        top: 110%;
+    }
+    .header .menu .form-menu {
+        display: flex;
+        width: 100%;
+    }
+    .header .landings {
+        display: flex;
+        width: 500%;
+        left: -200%;
+        padding: 0;
+        display: none;
+    }
+    .header .landings .list-group {
+        display: flex;
+        width: 50%;
+        padding: 20px 20px 20px 0;
+    }
+    .header .documentation-link:hover > .documentation {
+        display: block;
+    }
+    .header .landings-link:hover > .landings {
+        display: block;
+        display: flex;
+    }
+    .header .page {
+        display: flex;
+        left: -200%;
+        display: none;
+    }
+    .header .page .col-responsive {
+        display: flex;
+    }
+    .header .page-link:hover > .page {
+        display: block;
+        display: flex;
+    }
+    .header .account {
+        list-style-type: none;
+        width: 150%;
+        left: -35%;
+        padding: 30px 0 30px 30px;
+        display: none;
+    }
+    /* Hover menu account */
+    .header .account-link:hover > .account {
+        display: block;
+    }
+    .header .account-link:hover .nav-link {
+        color: #335eea;
+    }
+    .header .account .menu-settings:hover .drop-settings {
+        display: block;
+    }
+    .header .account .menu-signin:hover .drop-signin {
+        display: block;
+    }
+    .header .account .menu-signup:hover .drop-signup {
+        display: block;
+    }
+    .header .account .menu-pass:hover .drop-pass {
+        display: block;
+    }
+    .header .account .menu-error:hover .drop-error {
+        display: block;
+    }
+    .header .account .dropdown-menu2 {
+        position: absolute;
+        list-style-type: none;
+        border: 0 solid rgba(22,28,45,.15);
+        border-radius: .375rem;
+        box-shadow: 0 0.5rem 1.5rem rgba(22,28,45,.1);
+        background: #fff;
+        padding: 30px;
+        top: -30px;
+        left: 100%;
+        width: 100%;
+    }
+    .header .account .dropdown-item {
+        padding-bottom: 6px;
+        position: relative;
+        padding-right: 30px;
+    }
+    .header .documentation {
+        padding: 30px 20px;
+        width: 200%;
+        left: -50%;
+        display: none;
+    }
+}
+@media (max-width: 930px) {
+    .header .menu-btn {
+        display: block;
+    }
+    .header .menu {
+        position: absolute;
+        flex-direction: column;
+        left: 0;
+        background: #fff;
+        display: none;
+    }
+    .header .menu .form-menu {
+        margin: 2%;
+        padding-top: 24px;
+        box-shadow: 0 1rem 2.5rem rgba(22,28,45,.1), 0 0.5rem 1rem -0.75rem rgba(22,28,45,.1);
+    }
+    .header .menu .btn-close {
+        display: block;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        color: #506690;
+        cursor: pointer;
+    }
+    .header .menu .menu-list {
+        margin: 0;
+        flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .header .header-btn {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .header .landings {
+        display: block;
+    }
+    .header .landings .img {
+        display: none;
+    }
+    .header .landings .list-group {
+        display: flex;
+    }
+    .header .landings .list-group .col {
+        width: 47%;
+    }
+    .header .li-border-gray {
+        border-top: 1px solid #f1f4f8;
+        border-color: #d9e2ef!important;
+        margin: 15px 0;
+    }
+    .header .page {
+        display: flex;
+    }
+    .header .page .col-responsive {
+        width: 47%;
+    }
+    .header .page .form-group {
+        padding: 24px 24px 0 24px;
+    }
+    .header .account {
+        list-style-type: none;
+        padding: 24px 24px 0 24px;
+    }
+    .header .account .dropdown-menu2 {
+        list-style-type: none;
+        padding: 16px 0 16px 8px;
+    }
+    .header .account .drop-link1 {
+        position: relative;
+    }
+    .header .account .angle-down {
+        position: absolute;
+        right: 0;
+        display: none;
+    }
+    .header .documentation {
+        padding-bottom: 24px;
+    }
+    .header .documentation .doc-link {
+        padding: 20px 24px 0 24px;
+    }
 }
 /* End header */
 
@@ -806,6 +900,13 @@ a {
 .reviews {
     padding-top: 8rem;
 }
+.reviews .text {
+    display: flex;
+    justify-content: center;
+}
+.reviews .col-text {
+    padding: 0 20px;
+}
 .reviews .text .title {
     line-height: 1.35;
     margin-bottom: 1rem;
@@ -820,6 +921,7 @@ a {
     margin-bottom: 4rem;
     font-weight: 300;
     line-height: 1.6;
+    max-width: 625px;
 }
 .reviews .slide {
     box-shadow: 0 1.5rem 4rem rgba(22,28,45,.05)!important;
