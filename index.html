@@ -38,18 +38,20 @@
                             <li class="landings-link">
                                 <a class="nav-link" href="#">Landings</a>
                                 <div class="dropdown-menu landings">
-                                    <div class="img">
-                                        <div class="title">
-                                            Want to see an overview?
-                                        </div>
-                                        <div class="sumary">
-                                            See all the pages at once.
-                                        </div>
-                                        <a href="#">
-                                            <div class="landings-btn">
-                                                <span>View all pages</span>
+                                    <div class="form-img">
+                                        <div class="img">
+                                            <div class="title">
+                                                Want to see an overview?
                                             </div>
-                                        </a>
+                                            <div class="sumary">
+                                                See all the pages at once.
+                                            </div>
+                                            <a href="#">
+                                                <div class="landings-btn">
+                                                    <span>View all pages</span>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="list-group">
                                         <div class="col">
@@ -865,8 +867,12 @@
                         Annual
                     </div>
                     <div class="check-box">
-                        <input type="checkbox" class="custom-control-input" id="billingSwitch" data-toggle="price"
-                            data-target=".price">
+                        <form action="#">
+                            <div class="switch">
+                              <input id="switch-1" type="checkbox" class="switch-input" />
+                              <label for="switch-1" class="switch-label">Switch</label>
+                            </div>
+                          </form>
                     </div>
                     <div class="label">
                         Monthly
@@ -928,13 +934,8 @@
             </div>
         </div>
     </section>
-    <section class="position-relative">
-        <div class="shape">
-            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
-            </svg>
-        </div>
-    </section>
+    <div class="border-answers">
+    </div>
     <section class="answers">
         <div class="container">
             <div class="row">
@@ -1022,6 +1023,7 @@
             </div>
         </div>
     </section>
+    <div class="border-advice"></div>
     <section class="footer">
         <div class="container">
             <div class="row-footer">
