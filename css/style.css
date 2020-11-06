@@ -931,17 +931,14 @@ a {
     border-radius: .375rem;
     position: relative;
 }
-.reviews .slide .item {
-    display: flex;
+.reviews .slide .slide-item .color-logo svg {
+    color: #FF5A5F;
 }
-.reviews .slide .item .col {
-    width: 50%;
-}
-.reviews .slide .item .img img {
+.reviews .slide .slide-item .img img {
     width: 100%;
     border-radius: 5px 0px 0px 5px;
 }
-.reviews .slide .item .slide-text {
+.reviews .slide .slide-item .slide-text {
     padding: 4rem 2.5rem;
     display: flex;
     flex-direction: column;
@@ -975,6 +972,7 @@ a {
     color: #fff;
     padding: 13px 15px;
     border-radius: 50%;
+    z-index: 1;
 }
 .reviews .nav-previous {
     position: absolute;
@@ -985,6 +983,89 @@ a {
     color: #fff;
     padding: 13px 15px;
     border-radius: 50%;
+    z-index: 1;
+}
+.fade-slide .img {
+    animation-name: fade-slide-img;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade-slide-img {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+.fade-slide .fade-text-next {
+    animation-name: fade-slide-next;
+    animation-duration: .5s;
+    }
+    @keyframes fade-slide-next {
+        from {
+            padding-right: 0;
+            padding-left: 5rem;
+        }
+        to {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+.fade-slide .fade-text-prev {
+    animation-name: fade-slide-prev;
+    animation-duration: .5s;
+    }
+    @keyframes fade-slide-prev {
+    from {
+        padding-left: 0;
+        padding-right: 5rem;
+        }
+    to {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+        }
+    }
+
+@media (max-width: 991px) {
+    .reviews .text .title {
+        font-size: 1.5rem;
+    }
+    .reviews .text .sumary {
+        font-size: 1.0625rem;
+    }
+}
+@media (max-width: 769px) {
+    .reviews {
+        padding-top: 4rem;
+    }
+    .reviews .slide .slide-item .slide-text {
+        padding: 2rem 1.25rem;
+    }
+}
+@media (min-width: 685px) {
+    .reviews .slide .row-slide-item {
+        display: flex;
+        align-items: center;
+    }
+    .reviews .slide .slide-item {
+        display: flex;
+        align-items: center;
+    }
+    .reviews .slide .slide-item .col {
+        width: 50%;
+    }
+}
+@media (max-width: 684px) {
+    .reviews .nav-next {
+        top: 76%;
+    }
+    .reviews .nav-previous {
+        top: 76%;
+    }
+}
+@media (max-width: 474px) {
+    .reviews .nav-next {
+        top: 70%;
+    }
+    .reviews .nav-previous {
+        top: 70%;
+    }
 }
 /* End reviews */
 

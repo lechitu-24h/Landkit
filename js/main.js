@@ -1,3 +1,4 @@
+//Menu
 function showMenu() {
     document.getElementById("menu").style.display = "block";
 }
@@ -66,4 +67,42 @@ function dropdownMenu(n) {
             error.style.display = "block";
         }
     }
+}
+
+
+//slide
+var slideIndex = 1;
+showSlide(slideIndex);
+
+function flusSlides(n) {
+    showSlide(slideIndex += n);
+
+    var item1 = document.getElementById("slide-item-1");
+    var item2 = document.getElementById("slide-item-2");
+    if (n == 1) {
+        item1.classList.add("fade-text-next");
+        item2.classList.add("fade-text-next");
+        item1.classList.remove("fade-text-prev");
+        item2.classList.remove("fade-text-prev");
+    }
+    if (n == -1) {
+        item1.classList.remove("fade-text-next");
+        item2.classList.remove("fade-text-next");
+        item1.classList.add("fade-text-prev");
+        item2.classList.add("fade-text-prev");
+    }
+     
+}
+function showSlide(n) {
+    var slides = document.getElementsByClassName("slide-item");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (var i = 0;i < slides.length;i++){
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
 }
