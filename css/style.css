@@ -429,6 +429,9 @@ a {
         list-style-type: none;
         padding: 24px 24px 0 24px;
     }
+    .header .account .test {
+        display: block;
+    }
     .header .account .dropdown-menu2 {
         list-style-type: none;
         padding: 16px 0 16px 8px;
@@ -446,6 +449,12 @@ a {
     }
     .header .documentation .doc-link {
         padding: 20px 24px 0 24px;
+    }
+    .header .menu-responsive {
+        display: block;
+    }
+    .header .account .test .drop-settings {
+        display: block;
     }
 }
 /* End header */
@@ -483,7 +492,7 @@ a {
     font-weight: 300;
 }
 .about .btn-group {
-    margin-bottom: 30px;
+    padding: 15px 0;
 }
 .about .btn-group:hover {
     transform: translate3d(0,-3px,0);
@@ -492,7 +501,7 @@ a {
     color: #fff;
     background-color: #335eea;
     border: 1px solid transparent;
-    padding: .8125rem 1.25rem;
+    padding: 15px 10px;
     font-size: 1.0625rem;
     line-height: 1.6;
     border-radius: .375rem;
@@ -508,7 +517,7 @@ a {
     background-color: rgba(51,94,234,.1);
     color: #335eea;
     border: 1px solid transparent;
-    padding: .8125rem 1.25rem;
+    padding: 15px 10px;
     font-size: 1.0625rem;
     line-height: 1.6;
     border-radius: .375rem;

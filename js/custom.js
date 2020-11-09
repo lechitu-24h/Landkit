@@ -1,9 +1,6 @@
 //Menu
-function showMenu() {
-    document.getElementById("menu").style.display = "block";
-}
-function closeMenu() {
-    document.getElementById("menu").style.display = "none";
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("menu-responsive");
 }
 
 function dropdownMenu(n) {
