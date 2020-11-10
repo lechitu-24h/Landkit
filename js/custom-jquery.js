@@ -2,6 +2,19 @@
 $(".open-close").click(function (){
     $("#menu").toggleClass("menu-responsive");
 });
+//Menu dropdown responsive
+// var listItem = document.getElementsByClassName("dropdown-item");
+//     for (const dropItem of listItem) {
+//         dropItem.addEventListener("click", function(){
+//                 var listMenu = document.getElementsByClassName("dropdown-menu2");
+//                 for (const menuItem of listMenu) {
+//                     menuItem.style.display = "none";
+//                 }
+//                 this.children[1].style.display = "block";
+//                 console.log(document.body.clientWidth);
+//             });
+//     }
+
 
 //submit form
 $("#contact-submit").click(function (){
