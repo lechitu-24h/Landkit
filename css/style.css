@@ -21,6 +21,10 @@ body {
     margin-left: auto;
 }
 
+.mt-5 {
+    margin-top: 5px !important;
+}
+
 a {
     text-decoration: none;
 }
@@ -753,6 +757,13 @@ a {
     font-size: 12px;
     color: red;
     display: none;
+}
+.about-us .contact .form-info .noti-api {
+    padding: 0 20px;
+    margin-top: -10px;
+    font-weight: 300;
+    font-size: 12px;
+    color: red;
 }
 .about-us .contact .form-info .form-button {
     margin-top: 2rem;

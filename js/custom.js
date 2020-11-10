@@ -1,7 +1,10 @@
-//Menu
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("menu-responsive");
-}
+//Open close menu
+// var listButton = document.getElementsByClassName("open-close");
+// for (const itemButon of listButton) {
+//     itemButon.addEventListener("click", function(){
+//         document.getElementById("menu").classList.toggle("menu-responsive");
+//     });
+// }
 //Menu dropdown responsive
 var listItem = document.getElementsByClassName("dropdown-item");
 for (const dropItem of listItem) {
@@ -21,21 +24,16 @@ showSlide(slideIndex);
 function flusSlides(n) {
     showSlide(slideIndex += n);
 
-    var item1 = document.getElementById("slide-item-1");
-    var item2 = document.getElementById("slide-item-2");
-    if (n == 1) {
-        item1.classList.add("fade-text-next");
-        item2.classList.add("fade-text-next");
-        item1.classList.remove("fade-text-prev");
-        item2.classList.remove("fade-text-prev");
+    var listItemText = document.getElementsByClassName("slide-text");
+    for (const itemText of listItemText) {
+        if (n == 1) {
+            itemText.classList.add("fade-text-next");
+            itemText.classList.remove("fade-text-prev");
+        } else {
+            itemText.classList.add("fade-text-prev");
+            itemText.classList.remove("fade-text-next");
+        }
     }
-    if (n == -1) {
-        item1.classList.remove("fade-text-next");
-        item2.classList.remove("fade-text-next");
-        item1.classList.add("fade-text-prev");
-        item2.classList.add("fade-text-prev");
-    }
-     
 }
 function showSlide(n) {
     var slides = document.getElementsByClassName("slide-item");
@@ -52,36 +50,37 @@ function showSlide(n) {
 }
 
 //submit form
-function submitForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var pass = document.getElementById("password").value;
+// var contactSubmit = document.getElementById("contact-submit");
+// contactSubmit.addEventListener("click", function(){
+//     var name = document.getElementById("name").value;
+//     var email = document.getElementById("email").value;
+//     var pass = document.getElementById("password").value;
 
-    var notiName = document.getElementById("noti-name");
-    var notiEmail = document.getElementById("noti-email");
-    var notiPass = document.getElementById("noti-pass");
+//     var notiName = document.getElementById("noti-name");
+//     var notiEmail = document.getElementById("noti-email");
+//     var notiPass = document.getElementById("noti-pass");
 
-    if (name == "") {
-        notiName.style.display = "block";
-    } else {
-        notiName.style.display = "none";
-    }
-    if (email.length < 8) {
-        notiEmail.style.display = "block";
-    } else {
-        notiEmail.style.display = "none";
-    }
-    if (pass.length < 8) {
-        notiPass.style.display = "block";
-    } else {
-        notiPass.style.display = "none";
-    }
+//     if (name == "") {
+//         notiName.style.display = "block";
+//     } else {
+//         notiName.style.display = "none";
+//     }
+//     if (email.length < 8) {
+//         notiEmail.style.display = "block";
+//     } else {
+//         notiEmail.style.display = "none";
+//     }
+//     if (pass.length < 8) {
+//         notiPass.style.display = "block";
+//     } else {
+//         notiPass.style.display = "none";
+//     }
 
-    var contactInput = document.getElementsByClassName("contact-input");
-    for (const element of contactInput) {
-        console.log(element.value);
-    }
-}
+//     var contactInput = document.getElementsByClassName("contact-input");
+//     for (const element of contactInput) {
+//         console.log(element.value);
+//     }
+// });
 
 //Enter submit form
 var contactInput = document.getElementsByClassName("contact-input");

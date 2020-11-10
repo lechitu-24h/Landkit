@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="menu" id="menu">
-                    <div class="btn-close" onclick="toggleMenu()">
+                    <div class="btn-close open-close">
                         <span class="fa fa-times"></span>
                     </div>
                     <div class="form-menu">
@@ -432,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="menu-btn" onclick="toggleMenu()">
+                <div class="menu-btn open-close">
                     <i class="fa fa-bars"></i>
                 </div>
             </div>
@@ -600,22 +600,25 @@
                                 <input class="contact-input" id="name" type="text" placeholder="Name">
                             </div>
                             <div class="form-notification" id="noti-name">
-                                Name is not null
+                                Name is not null!
                             </div>
                             <div class="form-input">
                                 <input class="contact-input" id="email" type="text" placeholder="Email">
                             </div>
                             <div class="form-notification" id="noti-email">
-                                Email has a length is not less than 8
+                                Email has a length is not less than 8!
                             </div>
                             <div class="form-input">
                                 <input class="contact-input" id="password" type="password" placeholder="Password">
                             </div>
                             <div class="form-notification" id="noti-pass">
-                                Password has a length is not less than 8
+                                Password has a length is not less than 8!
                             </div>
                             <div class="form-button">
-                                <button id="contact-submit" onclick="submitForm()">Download a sample</button>
+                                <button id="contact-submit">Download a sample</button>
+                            </div>
+                            <div class="form-notification mt-5" id="noti-api">
+                                Connect API success!
                             </div>
                         </div>
                     </div>
@@ -759,7 +762,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="slide-text" id="slide-item-1">
+                            <div class="slide-text">
                                 <div class="title">
                                     <svg viewBox="0 0 2761 991" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -786,7 +789,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="slide-text" id="slide-item-2">
+                            <div class="slide-text">
                                 <div class="title color-logo">
                                     <svg viewBox="0 0 2761 991" xmlns="http://www.w3.org/2000/svg">
                                         <path
