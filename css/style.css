@@ -261,6 +261,7 @@ a {
     }
     .header .menu ul li {
         position: relative;
+        padding: 7px 0;
     }
     .header .dropdown-menu {
         padding: 20px 20px;
@@ -269,10 +270,11 @@ a {
         box-shadow: 0 0.5rem 1.5rem rgba(22,28,45,.1);
         position: absolute;
         background-color: #fff;
-        top: 110%;
+        top: 100%;
     }
     .header .menu .form-menu {
         display: flex;
+        align-items: center;
         width: 100%;
     }
     .header .landings {
@@ -737,14 +739,24 @@ a {
     border-right-width: 0;
     border-left-width: 0;
     border-radius: 0;
-    width: 100%;
+    width: 87%;
     height: calc(1.6em + 1.625rem + 2px);
     font-size: 1.0625rem;
     color: #161c2d;
     background-color: #fff;
+    padding: 0 20px;
+}
+.about-us .contact .form-info .form-notification {
+    padding: 0 20px;
+    margin-top: -10px;
+    font-weight: 300;
+    font-size: 12px;
+    color: red;
+    display: none;
 }
 .about-us .contact .form-info .form-button {
     margin-top: 2rem;
+    cursor: pointer;
 }
 .about-us .contact .form-info .form-button button {
     border: 1px solid transparent;
@@ -755,6 +767,7 @@ a {
     width: 100%;
     color: #fff;
     background-color: #42ba96;
+    cursor: pointer;
 }
 .about-us .contact .form-info .form-button button:hover {
     background-color: #389e7f;

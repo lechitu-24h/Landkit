@@ -2,70 +2,17 @@
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("menu-responsive");
 }
-
-function dropdownMenu(n) {
-    var settings = document.getElementById("drop-settings");
-    var signin = document.getElementById("drop-signin");
-    var signup = document.getElementById("drop-signup");
-    var pass = document.getElementById("drop-pass");
-    var error = document.getElementById("drop-error");
-    if (n == 1) {
-        if (settings.style.display == "block") {
-            settings.style.display = "none";
-        } else {
-            settings.style.display = "block";
-            signin.style.display = "none";
-            signup.style.display = "none";
-            pass.style.display = "none";
-            error.style.display = "none";
+//Menu dropdown responsive
+var listItem = document.getElementsByClassName("dropdown-item");
+for (const dropItem of listItem) {
+    dropItem.addEventListener("click", function(){
+        var listMenu = document.getElementsByClassName("dropdown-menu2");
+        for (const menuItem of listMenu) {
+            menuItem.style.display = "none";
         }
-    }
-    if (n == 2) {
-        if (signin.style.display == "block") {
-            signin.style.display = "none";
-        } else {
-            settings.style.display = "none";
-            signin.style.display = "block";
-            signup.style.display = "none";
-            pass.style.display = "none";
-            error.style.display = "none";
-        }
-    }
-    if (n == 3) {
-        if (signup.style.display == "block") {
-            signup.style.display = "none";
-        } else {
-            settings.style.display = "none";
-            signin.style.display = "none";
-            signup.style.display = "block";
-            pass.style.display = "none";
-            error.style.display = "none";
-        }
-    }
-    if (n == 4) {
-        if (pass.style.display == "block") {
-            pass.style.display = "none";
-        } else {
-            settings.style.display = "none";
-            signin.style.display = "none";
-            signup.style.display = "none";
-            pass.style.display = "block";
-            error.style.display = "none";
-        }
-    }
-    if (n == 5) {
-        if (error.style.display == "block") {
-            error.style.display = "none";
-        } else {
-            settings.style.display = "none";
-            signin.style.display = "none";
-            signup.style.display = "none";
-            pass.style.display = "none";
-            error.style.display = "block";
-        }
-    }
+        this.children[1].style.display = "block";
+    });
 }
-
 
 //slide
 var slideIndex = 1;
@@ -102,4 +49,47 @@ function showSlide(n) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
+}
+
+//submit form
+function submitForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("password").value;
+
+    var notiName = document.getElementById("noti-name");
+    var notiEmail = document.getElementById("noti-email");
+    var notiPass = document.getElementById("noti-pass");
+
+    if (name == "") {
+        notiName.style.display = "block";
+    } else {
+        notiName.style.display = "none";
+    }
+    if (email.length < 8) {
+        notiEmail.style.display = "block";
+    } else {
+        notiEmail.style.display = "none";
+    }
+    if (pass.length < 8) {
+        notiPass.style.display = "block";
+    } else {
+        notiPass.style.display = "none";
+    }
+
+    var contactInput = document.getElementsByClassName("contact-input");
+    for (const element of contactInput) {
+        console.log(element.value);
+    }
+}
+
+//Enter submit form
+var contactInput = document.getElementsByClassName("contact-input");
+for (const element of contactInput) {
+    element.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+         event.preventDefault();
+         document.getElementById("contact-submit").click();
+        }
+    });
 }

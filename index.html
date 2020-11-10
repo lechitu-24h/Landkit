@@ -213,7 +213,7 @@
                                 <a class="nav-link" href="#">Account</a>
                                 <ul class="dropdown-menu account">
                                     <li class="dropdown-item menu-settings">
-                                        <a class="drop-link1" onclick="dropdownMenu(1)">
+                                        <a class="drop-link1">
                                             <div class="drop-text">
                                                 Settings
                                             </div>
@@ -240,7 +240,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-item menu-signin">
-                                        <a class="drop-link1" onclick="dropdownMenu(2)">
+                                        <a class="drop-link1">
                                             <div class="drop-text">
                                                 Sign In
                                             </div>
@@ -268,7 +268,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-item menu-signup">
-                                        <a class="drop-link1" onclick="dropdownMenu(3)">
+                                        <a class="drop-link1">
                                             <div class="drop-text">
                                                 Sign Up
                                             </div>
@@ -294,7 +294,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-item menu-pass">
-                                        <a class="drop-link1" onclick="dropdownMenu(4)">
+                                        <a class="drop-link1">
                                             <div class="drop-text">
                                                 Password Reset
                                             </div>
@@ -313,7 +313,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-item menu-error">
-                                        <a class="drop-link1" onclick="dropdownMenu(5)">
+                                        <a class="drop-link1">
                                             <div class="drop-text">
                                                 Error
                                             </div>
@@ -597,16 +597,25 @@
                         </div>
                         <div class="form-group">
                             <div class="form-input">
-                                <input type="text" placeholder="Name">
+                                <input class="contact-input" id="name" type="text" placeholder="Name">
+                            </div>
+                            <div class="form-notification" id="noti-name">
+                                Name is not null
                             </div>
                             <div class="form-input">
-                                <input type="text" placeholder="Email">
+                                <input class="contact-input" id="email" type="text" placeholder="Email">
+                            </div>
+                            <div class="form-notification" id="noti-email">
+                                Email has a length is not less than 8
                             </div>
                             <div class="form-input">
-                                <input type="password" placeholder="Password">
+                                <input class="contact-input" id="password" type="password" placeholder="Password">
+                            </div>
+                            <div class="form-notification" id="noti-pass">
+                                Password has a length is not less than 8
                             </div>
                             <div class="form-button">
-                                <button type="submit">Download a sample</button>
+                                <button id="contact-submit" onclick="submitForm()">Download a sample</button>
                             </div>
                         </div>
                     </div>
@@ -869,10 +878,10 @@
                     <div class="check-box">
                         <form action="#">
                             <div class="switch">
-                              <input id="switch-1" type="checkbox" class="switch-input" />
-                              <label for="switch-1" class="switch-label">Switch</label>
+                                <input id="switch-1" type="checkbox" class="switch-input" />
+                                <label for="switch-1" class="switch-label">Switch</label>
                             </div>
-                          </form>
+                        </form>
                     </div>
                     <div class="label">
                         Monthly
@@ -1199,7 +1208,11 @@
 
 </body>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
 
 <script src="/js/custom.js"></script>
+<script src="/js/custom-jquery.js"></script>
 
 </html>
