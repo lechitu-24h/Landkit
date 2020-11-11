@@ -3,18 +3,16 @@ $(".open-close").click(function (){
     $("#menu").toggleClass("menu-responsive");
 });
 //Menu dropdown responsive
-// var listItem = document.getElementsByClassName("dropdown-item");
-//     for (const dropItem of listItem) {
-//         dropItem.addEventListener("click", function(){
-//                 var listMenu = document.getElementsByClassName("dropdown-menu2");
-//                 for (const menuItem of listMenu) {
-//                     menuItem.style.display = "none";
-//                 }
-//                 this.children[1].style.display = "block";
-//                 console.log(document.body.clientWidth);
-//             });
-//     }
-
+var listItem = $(".dropdown-item");
+listItem.each(function (){
+    $(this).click(function (){
+        listItem.each(function (){
+            $(this).children(".dropdown-menu2").css("display", "none");
+        });
+        console.log(this);
+        $(this).children(".dropdown-menu2").css("display", "block");
+    })
+})
 
 //submit form
 $("#contact-submit").click(function (){
@@ -43,19 +41,30 @@ $("#contact-submit").click(function (){
         console.log(element.value);
     }
 });
-
+//Enter submit form
+$(".contact-input").keypress(function (event){
+    if (event.which == 13) {
+        $("#contact-submit").click();
+        return false;
+    }
+})
 
 $("#contact-submit").click(function(){
+    $("#contact-submit").attr("disabled", true);
     $.ajax({
         url : "http://localhost:3001/api/login",
         type : "post",
-        dataType:"text",
+        dataType:"json",
         data : {
             username : $('#name').val(),
             password : $('#password').val()
         },
         success : function (){
             $("#noti-api").css("display", "block");
+            $("#contact-submit").attr("disabled", false);
+        },
+        error : function (){
+            $("#contact-submit").attr("disabled", false);
         }
     });
 });

@@ -5,19 +5,8 @@
 //         document.getElementById("menu").classList.toggle("menu-responsive");
 //     });
 // }
-//Menu dropdown responsive
-var listItem = document.getElementsByClassName("dropdown-item");
-$(".dropdown-item").click(function (){
-    for (const dropItem of listItem) {
-        dropItem.addEventListener("click", function(){
-            var listMenu = document.getElementsByClassName("dropdown-menu2");
-            for (const menuItem of listMenu) {
-                menuItem.style.display = "none";
-            }
-            this.children[1].style.display = "block";
-        });
-    }
-});
+// Menu dropdown responsive
+// var listItem = document.getElementsByClassName("dropdown-item");
 // for (const dropItem of listItem) {
 //     dropItem.addEventListener("click", function(){
 //         var listMenu = document.getElementsByClassName("dropdown-menu2");
@@ -25,9 +14,6 @@ $(".dropdown-item").click(function (){
 //             menuItem.style.display = "none";
 //         }
 //         this.children[1].style.display = "block";
-//         console.log(document.body.clientWidth);
-//         if (document.body.clientWidth > 930) console.log("true");
-//         else console.log("false");
 //     });
 // }
 
@@ -97,12 +83,12 @@ function showSlide(n) {
 // });
 
 //Enter submit form
-var contactInput = document.getElementsByClassName("contact-input");
-for (const element of contactInput) {
-    element.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13) {
-        //  event.preventDefault();
-         document.getElementById("contact-submit").click();
-        }
-    });
-}
+// var contactInput = document.getElementsByClassName("contact-input");
+// for (const element of contactInput) {
+//     element.addEventListener("keyup", function(event) {
+//         if (event.keyCode === 13) {
+//          event.preventDefault();
+//          document.getElementById("contact-submit").click();
+//         }
+//     });
+// }
