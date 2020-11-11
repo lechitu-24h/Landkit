@@ -547,6 +547,7 @@
     .about .about-content {
         display: flex;
         width: 100%;
+        align-items: center;
     }
     .about .text {
         width: 50%;
@@ -556,6 +557,31 @@
         padding: 0xp 20px;
         padding-left: 20px;
     } 
+}
+
+@media (max-width: 939px) {
+    .about .about-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about .img .img-col {
+        margin-bottom: 20px;
+    }
+    .about .text .text-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .title {
+        max-width: 400px;
+        text-align: center;
+    }
+    .about .sumary {
+        text-align: center;
+    }
+    .about .btn-view i {
+        display: none;
+    }
 }
 
 @media (max-width: 829px) {
@@ -578,9 +604,6 @@
 }
 
 @media (min-width: 375px) {
-    .about .text {
-        padding-bottom: 50px;
-    }
     .about .img img {
         width: 100%;
     }
@@ -914,6 +937,7 @@
 @media (min-width: 650px) {
     .about-us .introduce {
         display: flex;
+        align-items: center;
     }
     .about-us .introduce .col {
         width: 50%;
@@ -1087,9 +1111,16 @@
 @media (max-width: 474px) {
     .reviews .nav-next {
         top: 70%;
+        right: 0;
+        padding: 7px 9px;
     }
     .reviews .nav-previous {
         top: 70%;
+        left: 0;
+        padding: 7px 9px;
+    }
+    .reviews .slide .slide-item .slide-text {
+        padding: 20px 32px;
     }
 }
 /* End reviews */
@@ -1157,9 +1188,25 @@
 @media (min-width: 690px) {
     .service .row {
         display: flex;
+        align-items: center;
     }
     .service .col {
         width: 50%;
+    }
+}
+@media (max-width: 689px) {
+    .service .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .service .img {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 395px) {
+    .service .text .data .boder-gray {
+        margin: 0 10px;
     }
 }
 /* End service */
