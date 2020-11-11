@@ -1,11 +1,11 @@
-//Open close menu
+////Open close menu
 // var listButton = document.getElementsByClassName("open-close");
 // for (const itemButon of listButton) {
 //     itemButon.addEventListener("click", function(){
 //         document.getElementById("menu").classList.toggle("menu-responsive");
 //     });
 // }
-// Menu dropdown responsive
+//// Menu dropdown responsive
 // var listItem = document.getElementsByClassName("dropdown-item");
 // for (const dropItem of listItem) {
 //     dropItem.addEventListener("click", function(){
@@ -17,7 +17,7 @@
 //     });
 // }
 
-//slide
+////slide
 // var slideIndex = 1;
 // showSlide(slideIndex);
 
@@ -49,7 +49,7 @@
 //     slides[slideIndex - 1].style.display = "block";
 // }
 
-//submit form
+////submit form
 // var contactSubmit = document.getElementById("contact-submit");
 // contactSubmit.addEventListener("click", function(){
 //     var name = document.getElementById("name").value;
@@ -82,7 +82,7 @@
 //     }
 // });
 
-//Enter submit form
+////Enter submit form
 // var contactInput = document.getElementsByClassName("contact-input");
 // for (const element of contactInput) {
 //     element.addEventListener("keyup", function(event) {

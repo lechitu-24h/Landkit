@@ -1699,6 +1699,10 @@ a {
     text-decoration: none;
 }
 
-.db {
+.show {
     display: block !important;
+}
+
+.hidden {
+    display: none !important;
 }

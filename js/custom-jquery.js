@@ -6,9 +6,9 @@ $(".open-close").click(function (){
 $(".dropdown-item").each(function (){
     $(this).click(function (){
         $(".dropdown-item").each(function (){
-            $(this).children(".dropdown-menu2").css("display", "none");
+            $(this).children(".dropdown-menu2").hide();
         });
-        $(this).children(".dropdown-menu2").css("display", "block");
+        $(this).children(".dropdown-menu2").show();
     })
 })
 
@@ -85,6 +85,8 @@ $("#contact-submit").click(function(){
                 $("#contact-submit").attr("disabled", false);
             }
         });
+    } else {
+        $("#noti-api").html("");
     }
 
     var contactInput = $(".contact-input");
