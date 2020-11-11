@@ -3,19 +3,48 @@ $(".open-close").click(function (){
     $("#menu").toggleClass("menu-responsive");
 });
 //Menu dropdown responsive
-var listItem = $(".dropdown-item");
-listItem.each(function (){
+$(".dropdown-item").each(function (){
     $(this).click(function (){
-        listItem.each(function (){
+        $(".dropdown-item").each(function (){
             $(this).children(".dropdown-menu2").css("display", "none");
         });
-        console.log(this);
         $(this).children(".dropdown-menu2").css("display", "block");
     })
 })
 
+//slide
+var slideIndex = 1;
+showSlide(slideIndex);
+
+function flusSlides(n) {
+    showSlide(slideIndex += n);
+
+    $(".slide-text").each(function (){
+        if (n == 1) {
+            $(this).addClass("fade-text-next");
+            $(this).removeClass("fade-text-prev");
+        } else {
+            $(this).addClass("fade-text-prev");
+            $(this).removeClass("fade-text-next");
+        }
+    });
+}
+function showSlide(n) {
+    var slides = $(".slide-item");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    $(".slide-item").each(function (){
+        $(this).attr("style", "display: none");
+    })
+    $(slides[slideIndex - 1]).attr("style", "display: block");
+}
+
 //submit form
-$("#contact-submit").click(function (){
+$("#contact-submit").click(function(){
     var name = $("#name").val();
     var email = $("#email").val();
     var password = $("#password").val();
@@ -36,6 +65,28 @@ $("#contact-submit").click(function (){
         $("#noti-pass").css("display", "none");
     }
 
+    if (name != "" && email.length >= 8 && password.length >= 8) {
+        $("#contact-submit").attr("disabled", true);
+
+        $.ajax({
+            url : "http://localhost:3001/api/login",
+            type : "post",
+            dataType:"json",
+            data : {
+                username : name,
+                password : password
+            },
+            success : function (response){
+                $("#noti-api").html(response.message);
+                $("#contact-submit").attr("disabled", false);
+            },
+            error : function (response){
+                $("#noti-api").html(response.responseJSON.error);
+                $("#contact-submit").attr("disabled", false);
+            }
+        });
+    }
+
     var contactInput = $(".contact-input");
     for (const element of contactInput) {
         console.log(element.value);
@@ -48,24 +99,3 @@ $(".contact-input").keypress(function (event){
         return false;
     }
 })
-
-$("#contact-submit").click(function(){
-    $("#contact-submit").attr("disabled", true);
-    $.ajax({
-        url : "http://localhost:3001/api/login",
-        type : "post",
-        dataType:"json",
-        data : {
-            username : $('#name').val(),
-            password : $('#password').val()
-        },
-        success : function (){
-            $("#noti-api").css("display", "block");
-            $("#contact-submit").attr("disabled", false);
-        },
-        error : function (){
-            $("#contact-submit").attr("disabled", false);
-        }
-    });
-});
-

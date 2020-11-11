@@ -18,36 +18,36 @@
 // }
 
 //slide
-var slideIndex = 1;
-showSlide(slideIndex);
+// var slideIndex = 1;
+// showSlide(slideIndex);
 
-function flusSlides(n) {
-    showSlide(slideIndex += n);
+// function flusSlides(n) {
+//     showSlide(slideIndex += n);
 
-    var listItemText = document.getElementsByClassName("slide-text");
-    for (const itemText of listItemText) {
-        if (n == 1) {
-            itemText.classList.add("fade-text-next");
-            itemText.classList.remove("fade-text-prev");
-        } else {
-            itemText.classList.add("fade-text-prev");
-            itemText.classList.remove("fade-text-next");
-        }
-    }
-}
-function showSlide(n) {
-    var slides = document.getElementsByClassName("slide-item");
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    for (var i = 0;i < slides.length;i++){
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}
+//     var listItemText = document.getElementsByClassName("slide-text");
+//     for (const itemText of listItemText) {
+//         if (n == 1) {
+//             itemText.classList.add("fade-text-next");
+//             itemText.classList.remove("fade-text-prev");
+//         } else {
+//             itemText.classList.add("fade-text-prev");
+//             itemText.classList.remove("fade-text-next");
+//         }
+//     }
+// }
+// function showSlide(n) {
+//     var slides = document.getElementsByClassName("slide-item");
+//     if (n > slides.length) {
+//         slideIndex = 1;
+//     }
+//     if (n < 1) {
+//         slideIndex = slides.length;
+//     }
+//     for (var i = 0;i < slides.length;i++){
+//         slides[i].style.display = "none";
+//     }
+//     slides[slideIndex - 1].style.display = "block";
+// }
 
 //submit form
 // var contactSubmit = document.getElementById("contact-submit");
