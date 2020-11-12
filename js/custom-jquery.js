@@ -5,10 +5,13 @@ $(".open-close").click(function (){
 //Menu dropdown responsive
 $(".dropdown-item").each(function (){
     $(this).click(function (){
+        var index = $(this);
         $(".dropdown-item").each(function (){
-            $(this).children(".dropdown-menu2").hide();
+            if ($(this).html() != index.html()) {
+                $(this).children(".dropdown-menu2").slideUp();
+            }
         });
-        $(this).children(".dropdown-menu2").show();
+        $(this).children(".dropdown-menu2").slideToggle();
     })
 })
 
